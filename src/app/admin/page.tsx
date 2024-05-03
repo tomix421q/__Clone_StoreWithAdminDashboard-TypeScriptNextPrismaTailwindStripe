@@ -37,7 +37,7 @@ export default async function AdminDashboard() {
   const [salesData, userData, productData] = await Promise.all([getSalesData(), getUserData(), getProductData()])
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center'>
       <DashboardCard
         title={'Sales'}
         subtitle={`${formatNumber(salesData.numberOfSales)} Orders`}
@@ -71,7 +71,7 @@ function DashboardCard({ title, subtitle, body }: DashboardCardProps) {
       </CardHeader>
       <CardDescription>{body}</CardDescription>
       <CardContent>
-        <p>Text</p>
+        <p></p>
       </CardContent>
     </Card>
   )
